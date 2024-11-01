@@ -1,4 +1,5 @@
 import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 import Entities.Account;
@@ -7,8 +8,9 @@ import Model.outOfLimitException;
 
 public class App {
     public static void main(String[] args) {
-
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+
         try {
             System.out.println("Enter you accont details. ");
             System.out.println("Account number: ");
@@ -40,7 +42,7 @@ public class App {
         } catch (outOfLimitException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Character not suported. ");
         } catch (insuficientBalanceException e) {
             System.out.println(e.getMessage());
         }
