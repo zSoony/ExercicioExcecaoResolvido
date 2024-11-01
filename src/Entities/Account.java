@@ -48,7 +48,7 @@ public class Account {
     }
 
     public Double Deposit(double depositAmount) {
-        return Balance = depositAmount + Balance;
+        return Balance += depositAmount;
 
     }
 
@@ -63,7 +63,7 @@ public class Account {
             throw new outOfLimitException("the requested amount exceeds the imposed limit. ");
         }
 
-        return Balance = Balance - withdrawAmount;
+        return Balance -= withdrawAmount;
     }
 
     public String toString() {

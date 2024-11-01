@@ -37,12 +37,12 @@ public class App {
 
             System.out.println("New account balance: " + Account1.getBalance());
 
-        } catch (outOfLimitException a) {
-            System.out.println("Out of withdraw limits. ");
-        } catch (InputMismatchException b) {
-            System.out.println("Character not suported. ");
-        } catch (insuficientBalanceException c) {
-            System.out.println("Insuficient balance");
+        } catch (outOfLimitException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+        } catch (insuficientBalanceException e) {
+            System.out.println(e.getMessage());
         }
 
         sc.close();
